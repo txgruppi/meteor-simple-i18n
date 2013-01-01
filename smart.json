@@ -2,7 +2,7 @@
   "name": "simple-i18n",
   "description": "A simple Meteor internationalization",
   "homepage": "https://github.com/txgruppi/meteor-simple-i18n",
-  "author": "Tarcísio Gruppi <txgruppi@gmail.com>",
+  "author": "Tarcisio Gruppi",
   "version": "0.0.0",
   "git": "https://github.com/txgruppi/meteor-simple-i18n.git",
   "packages": {
