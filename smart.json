@@ -1,0 +1,11 @@
+{
+  "name": "simple-i18n",
+  "description": "A simple Meteor internationalization",
+  "homepage": "https://github.com/txgruppi/meteor-i18n",
+  "author": "Tarcísio Gruppi <txgruppi@gmail.com>",
+  "version": "0.0.0",
+  "git": "https://github.com/txgruppi/meteor-i18n.git",
+  "packages": {
+    "underscore-string": {}
+  }
+}
