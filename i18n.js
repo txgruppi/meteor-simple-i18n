@@ -1,7 +1,7 @@
 // A simple Meteor internationalization
 //
 // @author Tarcísio Gruppi <txgruppi@gmail.com>
-// @version 0.0.0
+// @version 0.1.0
 // @date 2013-01-01
 
 (function(){
@@ -36,6 +36,16 @@
           return self.collection.find({lang:lang});
         }
       });
+
+      // Block client operations if `this.allowClientOperations === false`
+      if (!this.allowClientOperations) {
+        var retFalse = function() {return false;};
+        this.collection.allow({
+          insert: retFalse,
+          update: retFalse,
+          remove: retFalse
+        });
+      }
     }
 
     // Subscribe to the selected language
