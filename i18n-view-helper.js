@@ -1,7 +1,7 @@
 // A simple Meteor internationalization
 //
 // @author Tarcísio Gruppi <txgruppi@gmail.com>
-// @version 0.1.0
+// @version 0.1.1
 // @date 2013-01-01
 
 (function(){
@@ -22,7 +22,7 @@
     if (args.length) {
       return _.str.sprintf.apply(_.str, args);
     } else {
-      return str;
+      return args[0];
     }
   });
 })();
