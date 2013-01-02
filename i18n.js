@@ -1,7 +1,7 @@
 // A simple Meteor internationalization
 //
 // @author Tarcísio Gruppi <txgruppi@gmail.com>
-// @version 0.1.1
+// @version 0.1.2
 // @date 2013-01-01
 
 (function(){
@@ -119,7 +119,7 @@
       this.collection.remove({lang:lang, base_str:baseStr});
     } else if (baseStr instanceof Array) {
       baseStr.forEach(function(i){
-        Meteor.I18n().insert(lang, i);
+        Meteor.I18n().remove(lang, i);
       });
     } else
       throw 'Expected string|array. Got: ' + (typeof str);
