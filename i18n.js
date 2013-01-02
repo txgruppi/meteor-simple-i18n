@@ -1,7 +1,7 @@
 // A simple Meteor internationalization
 //
 // @author Tarcísio Gruppi <txgruppi@gmail.com>
-// @version 0.1.2
+// @version 0.1.3
 // @date 2013-01-01
 
 (function(){
@@ -81,7 +81,7 @@
   I18n.prototype.insert = function(lang, baseStr, newStr) {
     if (typeof baseStr === 'string') {
       this.collection.insert({lang:lang, base_str:baseStr, new_str:newStr});
-    } else if (baseStr instanceof Array) {
+    } else if (_.isArray(baseStr)) {
       baseStr.forEach(function(i){
         Meteor.I18n().insert(lang, i[0], i[1]);
       });
@@ -117,7 +117,7 @@
 
     if (typeof baseStr === 'string') {
       this.collection.remove({lang:lang, base_str:baseStr});
-    } else if (baseStr instanceof Array) {
+    } else if (_.isArray(baseStr)) {
       baseStr.forEach(function(i){
         Meteor.I18n().remove(lang, i);
       });
