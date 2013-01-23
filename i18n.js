@@ -37,6 +37,7 @@
         }
       });
 
+      // Block client operations if `this.allowClientOperations === false`
       var retFunc = function() {return self.allowClientOperations;};
       this.collection.allow({
         insert: retFunc,
