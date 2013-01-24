@@ -1,7 +1,7 @@
 // A simple Meteor internationalization
 //
 // @author Tarcísio Gruppi <txgruppi@gmail.com>
-// @version 0.1.4
+// @version 0.1.5
 // @date 2013-01-01
 
 (function(){
