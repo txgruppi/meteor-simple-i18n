@@ -38,14 +38,12 @@
       });
 
       // Block client operations if `this.allowClientOperations === false`
-      if (!this.allowClientOperations) {
-        var retFalse = function() {return false;};
-        this.collection.allow({
-          insert: retFalse,
-          update: retFalse,
-          remove: retFalse
-        });
-      }
+      var retFunc = function() {return self.allowClientOperations;};
+      this.collection.allow({
+        insert: retFunc,
+        update: retFunc,
+        remove: retFunc
+      });
     }
 
     // Subscribe to the selected language
