@@ -11,14 +11,14 @@
   };
 
   // Initialize the I18n instance
-  // 
+  //
   // @param object options
-  // 
+  //
   // Options:
   //   `string defaultLang` The default language to use.
   //   `boolean allowClientOperations` Allow clients to insert, update or remove.
   //   `string collectionName` The name of the collection used to store the strings.
-  //   
+  //
   // @return I18n `this`
   I18n.prototype.init = function(options) {
     var self = this;
@@ -35,7 +35,7 @@
         if (lang) {
           return self.collection.find({lang:lang});
         }
-      });
+      }, {is_auto: true});
 
       // Block client operations if `this.allowClientOperations === false`
       var retFunc = function() {return self.allowClientOperations;};
@@ -60,21 +60,21 @@
   };
 
   // Insert a string to be translated
-  // 
+  //
   // This method have 3 signatures
-  // 
+  //
   // @param string lang The target language
   // @param string baseStr The base string
   // @param string newStr The translated string
-  // 
+  //
   // @param string lang The target language
   // @param array baseStr An array where each element is a array `[baseStr, newStr]`
-  // 
+  //
   // @param string lang The target language
   // @param object baseStr An object with `baseStr` as key and `newStr` as value
-  // 
+  //
   // @throws
-  // 
+  //
   // @return I18n `this`
   I18n.prototype.insert = function(lang, baseStr, newStr) {
     if (typeof baseStr === 'string') {
@@ -94,17 +94,17 @@
   };
 
   // Remove a string or an entire language
-  // 
+  //
   // This method have 2 signatures
-  // 
+  //
   // @param string lang The target language
   // @param string baseStr The base string
-  // 
+  //
   // @param string lang The target language
   // @param array baseStr An array where each element is a string `baseStr`
-  // 
+  //
   // @throws
-  // 
+  //
   // @return I18n `this`
   I18n.prototype.remove = function(lang, baseStr) {
     if (!baseStr) {
@@ -127,15 +127,15 @@
 
   // Get or set the current language
   // Use a Session var to store the current language and redraw all templates when changed
-  // 
+  //
   // Set:
   // @param string lang The target language
-  // 
+  //
   // @return I18n `this`
-  // 
+  //
   // Get:
   // @param void
-  // 
+  //
   // @return string The current language
   I18n.prototype.lang = function() {
     if (arguments.length == 0)
@@ -148,9 +148,9 @@
 
   // Translate a string
   // Translate the string based on the current language
-  // 
+  //
   // @param string str The `baseStr`
-  // 
+  //
   // @return string The `newStr` if found or the `baseStr` if not
   I18n.prototype.t = function(str) {
     var row = this.collection.findOne({lang:Session.get("current_language"), base_str: str});
@@ -163,7 +163,7 @@
   var instance = null;
 
   // Singleton
-  // 
+  //
   // @see `I18n.prototype.init`
   Meteor.I18n = function(options) {
     if (!instance)
