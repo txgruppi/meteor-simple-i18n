@@ -1,7 +1,7 @@
 // A simple Meteor internationalization
 //
 // @author Tarcísio Gruppi <txgruppi@gmail.com>
-// @version 0.1.5
+// @version 0.1.6
 // @date 2013-01-01
 
 (function(){
@@ -30,6 +30,7 @@
     this.collection = new Meteor.Collection(this.collectionName);
 
     // Publish the selected language
+    // {is_auto: true} to prevent autopublish warning
     if (Meteor.isServer) {
       Meteor.publish('current_language_records', function(lang){
         if (lang) {
