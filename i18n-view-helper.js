@@ -1,8 +1,8 @@
 // A simple Meteor internationalization
 //
 // @author Tarcísio Gruppi <txgruppi@gmail.com>
-// @version 0.1.6
-// @date 2013-01-01
+// @version 0.1.7
+// @date 2013-03-27
 
 (function(){
   // Register a Handlebars helper named `t`
