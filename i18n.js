@@ -33,6 +33,7 @@
     // {is_auto: true} to prevent autopublish warning
     if (Meteor.isServer) {
       Meteor.publish('current_language_records', function(lang){
+        check(lang, String);
         if (lang) {
           return self.collection.find({lang:lang});
         }
