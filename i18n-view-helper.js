@@ -1,14 +1,14 @@
 // A simple Meteor internationalization
 //
 // @author Tarcísio Gruppi <txgruppi@gmail.com>
-// @version 0.2.3
+// @version 0.3.0
 // @date 2013-03-27
 
 (function(){
   // Register a Handlebars helper named `t`
   // Try to translate a string using `I18n.prototype.t`
   //
-  // Use `_.str.sprintf` to return a formated string
+  // Use `Meteor.I18n().sprintf` to return a formated string
   //
   // Usage:
   // <pre>&lt;template name="greeting"&gt;
@@ -20,7 +20,7 @@
     var args = Array.prototype.slice.call(arguments, 0, arguments.length - 1);
     args[0] = Meteor.I18n().t(args[0]);
     if (args.length > 1) {
-      return _.str.sprintf.apply(_.str, args);
+      return Meteor.I18n().sprintf.apply(Meteor.I18n().sprintf, args);
     } else {
       return args[0];
     }
