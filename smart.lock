@@ -1,9 +1,5 @@
 {
-  "meteor": {
-    "git": "https://github.com/meteor/meteor.git",
-    "branch": "master",
-    "commit": "067113a37dd4e7824db1a16d5f7a90c3739eed9c"
-  },
+  "meteor": {},
   "dependencies": {
     "basePackages": {
       "simple-i18n": {
@@ -13,6 +9,11 @@
     "packages": {
       "simple-i18n": {
         "path": "."
+      },
+      "underscore-string": {
+        "git": "https://github.com/possibilities/meteor-underscore-string.git",
+        "tag": "v2.2.0rc.1",
+        "commit": "dec21fac23310daf76dc19f246749e7beb48af03"
       }
     }
   }
