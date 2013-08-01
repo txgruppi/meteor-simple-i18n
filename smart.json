@@ -3,7 +3,7 @@
   "description": "A simple Meteor internationalization",
   "homepage": "https://github.com/txgruppi/meteor-simple-i18n",
   "author": "Tarcisio Gruppi",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "git": "https://github.com/txgruppi/meteor-simple-i18n.git",
   "packages": {
     "underscore-string": {}
