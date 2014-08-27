@@ -14,6 +14,7 @@ Package.describe({
 // On use
 Package.on_use(function (api) {
   api.versionsFrom("METEOR@0.9.0");
+  api.use(['underscore']);
 
   // Add files
   api.add_files("i18n.js", ["client", "server"]);
