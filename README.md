@@ -4,8 +4,7 @@ Simple internationalization using collections and session.
 
 ## How to install
 
-1. Add the package `simple-i18n` to your `smart.json` file.
-2. Run `mrt`
+1. Run `meteor add txgruppi:simple-i18n`
 
 ## Usage
 
