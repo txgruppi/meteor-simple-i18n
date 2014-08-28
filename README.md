@@ -38,4 +38,4 @@ for (var i in translations) {
 
 ## More info
 
-[http://TXGruppi.github.com/meteor-simple-i18n/](http://TXGruppi.github.com/meteor-simple-i18n/)
+[http://txgruppi.github.com/meteor-simple-i18n/](http://TXGruppi.github.com/meteor-simple-i18n/)
